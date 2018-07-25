@@ -53,6 +53,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4683525170751956}
+  - component: {fileID: 65928526629655504}
   m_Layer: 0
   m_Name: Furniture_001_TVCabniet_001
   m_TagString: Untagged
@@ -132,7 +133,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1363227904773288}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.0451374, y: -0.49348485, z: 0.38199997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4685254656843118}
@@ -400,6 +401,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1586065919011016}
   m_Mesh: {fileID: 4300004, guid: 44d5c8826aa3d6747b9e2574f47d9ad2, type: 3}
+--- !u!65 &65928526629655504
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1363227904773288}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.610351, y: 0.8646538, z: 1}
+  m_Center: {x: 0, y: 0.3441912, z: 0}
 --- !u!95 &95379186780186868
 Animator:
   serializedVersion: 3
