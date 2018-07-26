@@ -105,7 +105,6 @@ GameObject:
   - component: {fileID: 4935332468664108}
   - component: {fileID: 33282291452966870}
   - component: {fileID: 23617475386394628}
-  - component: {fileID: 95824651199210468}
   m_Layer: 0
   m_Name: Chair_002_Couch_001
   m_TagString: Untagged
@@ -251,7 +250,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1486383456109990}
   m_LocalRotation: {x: -0, y: 0.7733046, z: -0, w: 0.63403475}
-  m_LocalPosition: {x: 1.1829996, y: -0.608463, z: 4.2559996}
+  m_LocalPosition: {x: 1.1829996, y: -0.617, z: 4.2559996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4935332468664108}
@@ -557,20 +556,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5745537, y: 1.3330376, z: 3.2951732}
   m_Center: {x: 0.03888476, y: 0.69194114, z: -2.4572022e-10}
---- !u!95 &95824651199210468
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1722759850396830}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 35914298a46de874685f688e8da3c20f, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
