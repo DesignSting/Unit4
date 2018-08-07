@@ -4,8 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class EndGame : MonoBehaviour {
-
-	public void MainMenu()
+    public void Start()
+    {
+        Cursor.visible = true;
+    }
+    public void MainMenu()
     {
         SceneManager.LoadScene(0);
     }

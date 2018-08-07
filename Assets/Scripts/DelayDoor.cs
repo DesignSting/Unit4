@@ -54,6 +54,12 @@ public class DelayDoor : MonoBehaviour {
                 else
                     objectToTime.GetComponent<Light>().enabled = false;
             }
+
+            if( objectToTime.tag == "Sound")
+            {
+                AudioSource audioData = objectToTime.GetComponent<AudioSource>();
+                audioData.enabled = true;
+            }
             taskComplete = true;
         }
     }

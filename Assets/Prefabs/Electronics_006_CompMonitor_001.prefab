@@ -36,6 +36,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4986583966246778}
+  - component: {fileID: 65248057911755878}
   m_Layer: 0
   m_Name: Electronics_006_CompMonitor_001
   m_TagString: Untagged
@@ -157,7 +158,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1312531033284944}
   m_LocalRotation: {x: -0, y: 0.569464, z: -0, w: 0.8220163}
-  m_LocalPosition: {x: -1.0606058, y: -1.4766225, z: -2.739378}
+  m_LocalPosition: {x: -1.1989999, y: -2.179, z: -2.9359999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4683869534170434}
@@ -328,6 +329,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1035336696743108}
   m_Mesh: {fileID: 4300004, guid: 24a05d56bd635554d94cc82c5f8daaf1, type: 3}
+--- !u!65 &65248057911755878
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1312531033284944}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.6685829, z: 0.2796705}
+  m_Center: {x: -7.553007e-11, y: 0.16570854, z: -0.0053837155}
 --- !u!95 &95949840698003224
 Animator:
   serializedVersion: 3
