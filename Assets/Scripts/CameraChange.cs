@@ -6,22 +6,43 @@ public class CameraChange : MonoBehaviour {
 
     public Camera firstCamera;
     public Camera secondCamera;
+    public bool turnOff;
+    public bool doneOnce;
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
         {
-            if(firstCamera.enabled)
+            if (turnOff && !doneOnce)
             {
-                firstCamera.enabled = false;
-                secondCamera.enabled = true;
-            }
+                if (firstCamera.enabled)
+                {
+                    firstCamera.enabled = false;
+                    secondCamera.enabled = true;
+                }
 
-            else
-            {
-                firstCamera.enabled = true;
-                secondCamera.enabled = false;
+                else
+                {
+                    firstCamera.enabled = true;
+                    secondCamera.enabled = false;
+                }
+                doneOnce = true;
             }
+            else if(!turnOff)
+            {
+                if (firstCamera.enabled)
+                {
+                    firstCamera.enabled = false;
+                    secondCamera.enabled = true;
+                }
+
+                else
+                {
+                    firstCamera.enabled = true;
+                    secondCamera.enabled = false;
+                }
+            }
+            
         }
     }
 }

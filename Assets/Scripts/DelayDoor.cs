@@ -33,7 +33,7 @@ public class DelayDoor : MonoBehaviour {
 
     }
 
-    private void DoAction()
+    public void DoAction()
     {
         if (!taskComplete)
         {
@@ -42,13 +42,13 @@ public class DelayDoor : MonoBehaviour {
                 AudioSource audioData = objectToTime.GetComponent<AudioSource>();
                 audioData.enabled = true;
                 objectToTime.GetComponent<QuickDoor>().openDoor = true;
-                objectToTime.GetComponentInParent<AudioSource>();
+                //objectToTime.GetComponentInParent<AudioSource>();
             }
 
             if (objectToTime.tag == "Light")
             {
                 if (objectToTime.GetComponent<Light>().enabled == false)
-                 {
+                {
                     objectToTime.GetComponent<Light>().enabled = true;
                 }
                 else

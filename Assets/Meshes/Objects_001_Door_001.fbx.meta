@@ -6,11 +6,36 @@ ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Object_001_Knob_001
+    100004: Object_001_Knob_002
+    100006: Object_001_Shaft_001
+    100008: Object_001_Shaft_002
+    100010: Objects_001_Decor_001
     400000: //RootNode
+    400002: Object_001_Knob_001
+    400004: Object_001_Knob_002
+    400006: Object_001_Shaft_001
+    400008: Object_001_Shaft_002
+    400010: Objects_001_Decor_001
     2100000: lambert1
     2300000: //RootNode
+    2300002: Object_001_Knob_001
+    2300004: Object_001_Knob_002
+    2300006: Object_001_Shaft_001
+    2300008: Object_001_Shaft_002
+    2300010: Objects_001_Decor_001
     3300000: //RootNode
+    3300002: Object_001_Knob_001
+    3300004: Object_001_Knob_002
+    3300006: Object_001_Shaft_001
+    3300008: Object_001_Shaft_002
+    3300010: Objects_001_Decor_001
     4300000: Objects_001_InsideDoor_001
+    4300002: Object_001_Knob_001
+    4300004: Object_001_Shaft_001
+    4300006: Object_001_Knob_002
+    4300008: Object_001_Shaft_002
+    4300010: Objects_001_Decor_001
     9500000: //RootNode
   externalObjects: {}
   materials:

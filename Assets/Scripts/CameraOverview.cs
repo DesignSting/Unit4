@@ -5,28 +5,12 @@ using UnityEngine;
 public class CameraOverview : MonoBehaviour {
 
     public Camera overViewCamera;
-    public Canvas letterCanvas;
-    public float cameraSpeed;
-    private float runningSpeed;
-
-    private float minXPos;
-    private float minZPos;
-
-    private float maxXPos;
-    private float maxZPos;
+    public Canvas overViewCanvasOn;
+    public Canvas overViewCanvasOff;
+    public ParticleSystem overViewParticle;
 
     public bool inRange = false;
     public bool displayed = false;
-
-    // Use this for initialization
-    void Start ()
-    {
-        minXPos = overViewCamera.transform.position.x - (float)(0.6);
-        maxXPos = overViewCamera.transform.position.x + (float)(0.1);
-
-        minZPos = overViewCamera.transform.position.z - (float)(0.2);
-        maxZPos = overViewCamera.transform.position.z + (float)(0.5);
-    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -34,50 +18,36 @@ public class CameraOverview : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.E))
         {
 
-            if (inRange)
+            if (inRange && !displayed)
             {
                 overViewCamera.enabled = true;
                 displayed = true;
+                overViewCanvasOn.GetComponent<Canvas>().enabled = false;
+                overViewCanvasOff.GetComponent<Canvas>().enabled = true;
+            }
+
+            else if(displayed && Input.GetKeyDown(KeyCode.F))
+            {
+
+            }
+            else if(displayed)
+            {
+                overViewCamera.enabled = false;
+                displayed = false;
+                overViewCanvasOn.GetComponent<Canvas>().enabled = true;
+                overViewCanvasOff.GetComponent<Canvas>().enabled = false;
             }
         }
-        /*
-        if(displayed)
-        {
-            runningSpeed = Time.deltaTime * cameraSpeed;
-            if (Input.GetKeyDown(KeyCode.J))
-            {
-                if (overViewCamera.transform.position.x <= maxXPos)
-                    overViewCamera.transform.position = transform.position + new Vector3(runningSpeed, 2.4f, 0);
-                Debug.Log("Left");
-            }
-            if (Input.GetKeyDown(KeyCode.L))
-            {
-                if (overViewCamera.transform.position.x >= minXPos)
-                    overViewCamera.transform.position = transform.position - new Vector3(runningSpeed, 2.4f, 0);
-                Debug.Log("Right");
-            }
-            if (Input.GetKeyDown(KeyCode.I))
-            {
-                if (overViewCamera.transform.position.z >= maxZPos)
-                    overViewCamera.transform.position = transform.position - new Vector3(0, 2.4f, runningSpeed);
-                Debug.Log("Up");
-            }
-            if (Input.GetKeyDown(KeyCode.K))
-            {
-                if (overViewCamera.transform.position.z <= minZPos)
-                    overViewCamera.transform.position = transform.position + new Vector3(0, 2.4f, runningSpeed);
-                Debug.Log("Down");
-            }
-        }
-        */
 	}
+
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
         {
             inRange = true;
-            letterCanvas.enabled = true;
+            overViewCanvasOn.GetComponent<Canvas>().enabled = true;
+            overViewParticle.GetComponent<ParticleSystem>().Play();
         }
     }
 
@@ -88,7 +58,9 @@ public class CameraOverview : MonoBehaviour {
             inRange = false;
             overViewCamera.enabled = false;
             displayed = false;
-            letterCanvas.enabled = false;
+            overViewCanvasOn.GetComponent<Canvas>().enabled = false;
+            overViewCanvasOff.GetComponent<Canvas>().enabled = false;
+            overViewParticle.GetComponent<ParticleSystem>().Stop();
         }
     }
 }
