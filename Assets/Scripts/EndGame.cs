@@ -4,8 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class EndGame : MonoBehaviour {
+
     public void Start()
     {
+        Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
     }
     public void MainMenu()
